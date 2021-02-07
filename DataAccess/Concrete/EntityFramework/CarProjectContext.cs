@@ -7,7 +7,7 @@ using System.Text;
 namespace DataAccess.Concrete.EntityFramework
 {
     //context: db tabloları ile proje classlarını bağlamak için
-    class CarProjectContext:DbContext
+    public class CarProjectContext:DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

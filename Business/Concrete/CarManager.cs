@@ -16,9 +16,30 @@ namespace Business.Concrete
             _carDal = carDal;
         }
 
+
         public List<Car> GetAll()
         {
             return _carDal.GetAll();
+        }
+
+        public IEnumerable<Car> GetAllByBrandId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetAllByBrandId(string id)
+        {
+            return _carDal.GetAll(p=>p.BrandId==id);
+        }
+
+        public List<Car> GetAllByColorId(int id)
+        {
+            return _carDal.GetAll(p=>p.ColorId==id);
+        }
+
+        public List<Car> GetAllByBrandId(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
